@@ -1568,10 +1568,15 @@ getANR(int n, char **p) {
 /* ---------------------------------------------------------------------------- */
 PRIVATE int
 setcorrectIQ(int n, char **p) {
-  REAL phaseadjustment = atof(p[0]),
-       gainadjustment = atof(p[1]);
-  rx[RL]->iqfix->phase = 0.001 * phaseadjustment;
-  rx[RL]->iqfix->gain = 1.0 + 0.001 * gainadjustment;
+  REAL phase = atof(p[0]),
+       gain = atof(p[1]);
+  int i;																// SV1EIA AIR
+	for (i = 0; i < DEFSPEC; i++)											// SV1EIA AIR
+	{																	// SV1EIA AIR
+		rx[RL]->iqfix->phase[i] = (REAL) (0.001 * phase);		// SV1EIA AIR
+		rx[RL]->iqfix->gain[i] = (REAL) (1.0 + 0.001 * gain);	// SV1EIA AIR
+	}																	// SV1EIA AIR
+	rx[RL]->iqfix->spec = 0;									// SV1EIA AIR
   return 0;
 }
 
@@ -1603,8 +1608,14 @@ getTXIQ(int n, char **p) {
 /* ---------------------------------------------------------------------------- */
 PRIVATE int
 setcorrectIQphase(int n, char **p) {
-  REAL phaseadjustment = atof(p[0]);
-  rx[RL]->iqfix->phase = 0.001 *phaseadjustment;
+  REAL phase = atof(p[0]);
+  //rx[RL]->iqfix->phase = 0.001 *phaseadjustment;
+  int i;																// SV1EIA AIR
+	for (i = 0; i < DEFSPEC; i++)											// SV1EIA AIR
+	{																	// SV1EIA AIR
+		rx[RL]->iqfix->phase[i] = (REAL) (0.001 * phase);		// SV1EIA AIR
+	}																	// SV1EIA AIR
+	rx[RL]->iqfix->spec = 0;									// SV1EIA AIR
   return 0;
 }
 
@@ -1618,8 +1629,14 @@ setcorrectIQphase(int n, char **p) {
 /* ---------------------------------------------------------------------------- */
 PRIVATE int
 setcorrectIQgain(int n, char **p) {
-  REAL gainadjustment = atof(p[0]);
-  rx[RL]->iqfix->gain = 1.0 + 0.001 * gainadjustment;
+  REAL gain = atof(p[0]);
+  //rx[RL]->iqfix->gain = 1.0 + 0.001 * gainadjustment;
+  int i;																// SV1EIA AIR
+	for (i = 0; i < DEFSPEC; i++)											// SV1EIA AIR
+	{																	// SV1EIA AIR
+		rx[RL]->iqfix->gain[i] = (REAL) (1.0 + 0.001 * gain);	// SV1EIA AIR
+	}																	// SV1EIA AIR
+	rx[RL]->iqfix->spec = 0;									// SV1EIA AIR
   return 0;
 }
 
@@ -1633,10 +1650,21 @@ setcorrectIQgain(int n, char **p) {
 /* ---------------------------------------------------------------------------- */
 PRIVATE int
 setcorrectTXIQ(int n, char **p) {
+/*
   REAL phaseadjustment = atof(p[0]),
        gainadjustment = atof(p[1]);
   tx->iqfix->phase = 0.001 * phaseadjustment;
   tx->iqfix->gain = 1.0 + 0.001 * gainadjustment;
+*/
+  REAL phase = atof(p[0]),
+       gain = atof(p[1]);
+  int i;																// SV1EIA AIR
+	for (i = 0; i < DEFSPEC; i++)											// SV1EIA AIR
+	{																	// SV1EIA AIR
+		tx->iqfix->phase[i] = (REAL) (0.001 * phase);		// SV1EIA AIR
+		tx->iqfix->gain[i] = (REAL) (1.0 + 0.001 * gain);	// SV1EIA AIR
+	}																	// SV1EIA AIR
+	tx->iqfix->spec = 0;									// SV1EIA AIR
   return 0;
 }
 
@@ -1650,8 +1678,15 @@ setcorrectTXIQ(int n, char **p) {
 /* ---------------------------------------------------------------------------- */
 PRIVATE int
 setcorrectTXIQphase(int n, char **p) {
-  REAL phaseadjustment = atof(p[0]);
-  tx->iqfix->phase = 0.001 * phaseadjustment;
+  //REAL phaseadjustment = atof(p[0]);
+  //tx->iqfix->phase = 0.001 * phaseadjustment;
+  REAL phase = atof(p[0]);
+  int i;																// SV1EIA AIR
+	for (i = 0; i < DEFSPEC; i++)											// SV1EIA AIR
+	{																	// SV1EIA AIR
+		tx->iqfix->phase[i] = (REAL) (0.001 * phase);		// SV1EIA AIR
+	}																	// SV1EIA AIR
+	tx->iqfix->spec = 0;									// SV1EIA AIR
   return 0;
 }
 
@@ -1665,8 +1700,15 @@ setcorrectTXIQphase(int n, char **p) {
 /* ---------------------------------------------------------------------------- */
 PRIVATE int
 setcorrectTXIQgain(int n, char **p) {
-  REAL gainadjustment = atof(p[0]);
-  tx->iqfix->gain = 1.0 + 0.001 * gainadjustment;
+  //REAL gainadjustment = atof(p[0]);
+  //tx->iqfix->gain = 1.0 + 0.001 * gainadjustment;
+  REAL gain = atof(p[0]);
+  int i;																// SV1EIA AIR
+	for (i = 0; i < DEFSPEC; i++)											// SV1EIA AIR
+	{																	// SV1EIA AIR
+		tx->iqfix->gain[i] = (REAL) (1.0 + 0.001 * gain);	// SV1EIA AIR
+	}																	// SV1EIA AIR
+	tx->iqfix->spec = 0;									// SV1EIA AIR
   return 0;
 }
 
