@@ -1,0 +1,2 @@
+update.c:	  rx[RL]->banr.gen->adaptation_rate);
+update.c:  rx[RL]->banr.gen->adaptation_rate = adaptation_rate;

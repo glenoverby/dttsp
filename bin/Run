@@ -1,0 +1,30 @@
+
+set -x
+echo $SDR_SPECPATH
+echo $SDR_METERPATH
+echo $SDR_PARMPATH
+#mkfifo $SDR_PARMPATH
+#mkfifo $SDR_METERPATH
+#mkfifo $SDR_SPECPATH
+PIDS=""
+#socat -u -b 65536 UDP-LISTEN:19002   PIPE:$SDR_SPECPATH  &
+#PIDS="$PIDS $!"
+#socat -u          UDP-LISTEN:19003   PIPE:$SDR_METERPATH &
+#PIDS="$PIDS $!"
+./sdr-core -s -m &
+PIDS="$PIDS $!"
+sleep 1
+jack_lsp
+jack_connect sdr:ol alsa_pcm:playback_1 
+jack_connect sdr:or alsa_pcm:playback_2
+jack_connect alsa_pcm:capture_1 sdr:il        
+jack_connect alsa_pcm:capture_2 sdr:ir     
+#socat -u PIPE:$SDR_PARMPATH UDP:localhost:19001,connect-timeout=10 &
+#PIDS="$PIDS $!"
+
+echo $PIDS
+echo -n hit return to kill everything:
+read
+kill $PIDS
+
+

@@ -1,0 +1,13 @@
+17236-17728 [493]	Console/UI
+18464-18768 [305]	VR-Kernel
+19001-19190 [190]	DSP
+17008-17184 [177]	Hardware
+
+19001	    UDP		default sdr-core dumb command port
+19002	    UDP		default sdr-core spectrum output
+19003	    UDP		default sdr-core meter output
+
+18464	    TCP		default kernel HTTP
+18541	    TCP		default kernel HTTPS
+
+18617	    TCP		default python exec (GR)

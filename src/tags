@@ -1,0 +1,510 @@
+AC_PREREQ	configure.ac	/^AC_PREREQ(2.60)$/
+AMDemod	am_demod.c	/^AMDemod(AMD am) {$/
+CWTone	cwtones.c	/^CWTone(CWToneGen cwt) {$/
+CWToneOff	cwtones.c	/^CWToneOff(CWToneGen cwt) {$/
+CWToneOn	cwtones.c	/^CWToneOn(CWToneGen cwt) {$/
+CXBnorm	sdr.c	/^CXBnorm(CXB buff) {$/
+CXBnormsqr	sdr.c	/^CXBnormsqr(CXB buff) {$/
+CXBpeak	sdr.c	/^CXBpeak(CXB buff) {$/
+CXBpeakpwr	sdr.c	/^CXBpeakpwr(CXB buff) {$/
+CXBscl	sdr.c	/^CXBscl(CXB buff, REAL scl) {$/
+Cabs	cxops.c	/^Cabs(COMPLEX z) {$/
+Cadd	cxops.c	/^Cadd(COMPLEX x, COMPLEX y) {$/
+Cappmag	cxops.c	/^Cappmag(COMPLEX z) {$/
+Cdiv	cxops.c	/^Cdiv(COMPLEX x, COMPLEX y) {$/
+Cexp	cxops.c	/^Cexp(COMPLEX z) {$/
+Cmag	cxops.c	/^Cmag(COMPLEX z) {$/
+Cmplx	cxops.c	/^Cmplx(REAL x, IMAG y) {$/
+Cmul	cxops.c	/^Cmul(COMPLEX x, COMPLEX y) {$/
+ComplexOSC	oscillator.c	/^ComplexOSC(OSC p) {$/
+Conjg	cxops.c	/^Conjg(COMPLEX z) {$/
+Cp2r	cxops.c	/^Cp2r(COMPLEX z) {$/
+Cr2p	cxops.c	/^Cr2p(COMPLEX z) {$/
+Cscl	cxops.c	/^Cscl(COMPLEX x, REAL a) {$/
+Csqrmag	cxops.c	/^Csqrmag(COMPLEX z) {$/
+Csub	cxops.c	/^Csub(COMPLEX x, COMPLEX y) {$/
+DCBlock	dcblock.c	/^DCBlock(DCBlocker dcb) {$/
+Delayer	delay.c	/^Delayer(DelayLine d) {$/
+DttSPAgc	dttspagc.c	/^DttSPAgc(DTTSPAGC a, int tick) {$/
+F	splitfields.c	/^F(SPLIT s, int i) {$/
+FMDemod	fm_demod.c	/^FMDemod(FMD fm) {$/
+FiltOvSv_fetchpoint	ovsv.c	/^FiltOvSv_fetchpoint(FiltOvSv pflt) {$/
+FiltOvSv_fetchsize	ovsv.c	/^FiltOvSv_fetchsize(FiltOvSv pflt) {$/
+FiltOvSv_initpoint	ovsv.c	/^FiltOvSv_initpoint(FiltOvSv pflt) {$/
+FiltOvSv_initsize	ovsv.c	/^FiltOvSv_initsize(FiltOvSv pflt) {$/
+FiltOvSv_storepoint	ovsv.c	/^FiltOvSv_storepoint(FiltOvSv pflt) {$/
+FiltOvSv_storesize	ovsv.c	/^FiltOvSv_storesize(FiltOvSv pflt) {$/
+Fptr	splitfields.c	/^Fptr(SPLIT s, int i) {$/
+HalfBandit	halfband.c	/^HalfBandit(HalfBander h) {$/
+ISOband_get_exact	isoband.c	/^ISOband_get_exact(int band) {$/
+ISOband_get_high	isoband.c	/^ISOband_get_high(int band) {$/
+ISOband_get_info	isoband.c	/^ISOband_get_info(int band) {$/
+ISOband_get_low	isoband.c	/^ISOband_get_low(int band) {$/
+ISOband_get_nominal	isoband.c	/^ISOband_get_nominal(int band) {$/
+InitSPEEDTRIG	fastrig.c	/^InitSPEEDTRIG(void) {$/
+Mfilter	filter.c	/^main(int argc, char **argv) {$/
+Miambic-keyer	iambic-keyer.c	/^main(int argc, char **argv) {$/
+Miambic-keyer-e	iambic-keyer-e.c	/^main(int argc, char **argv) {$/
+Mkeyboard-keyer	keyboard-keyer.c	/^main(int argc, char **argv) {$/
+Mpassport	passport.c	/^main(int argc, char **argv) {$/
+Mport-clients-demo	port-clients-demo.c	/^main(int argc, char **argv) {$/
+Msdr-main	sdr-main.c	/^main(int argc, char **argv) {$/
+NF	splitfields.c	/^NF(SPLIT s) {$/
+PolyPhaseFIR	resample.c	/^PolyPhaseFIR(ResSt r) {$/
+RealOSC	oscillator.c	/^RealOSC(OSC p) {$/
+SDROMnoiseblanker	noiseblanker.c	/^SDROMnoiseblanker(NB nb) {$/
+STKDelay_clear	stkstuff.c	/^STKDelay_clear(STKDelay d) {$/
+STKDelay_compute_sample	stkstuff.c	/^STKDelay_compute_sample(STKDelay d, REAL input) {$/
+STKDelay_contents_at	stkstuff.c	/^STKDelay_contents_at(STKDelay d, int tap) {$/
+STKDelay_energy	stkstuff.c	/^STKDelay_energy(STKDelay d) {$/
+STKDelay_get_delay	stkstuff.c	/^STKDelay_get_delay(STKDelay d) {$/
+STKDelay_get_max_delay	stkstuff.c	/^STKDelay_get_max_delay(STKDelay d) {$/
+STKDelay_last_out	stkstuff.c	/^STKDelay_last_out(STKDelay d){$/
+STKDelay_next_out	stkstuff.c	/^STKDelay_next_out(STKDelay d) {$/
+STKDelay_set_delay	stkstuff.c	/^STKDelay_set_delay(STKDelay d, int delay) {$/
+STKDelay_set_max_delay	stkstuff.c	/^STKDelay_set_max_delay(STKDelay d, int max_delay) /
+STKDelay_tick	stkstuff.c	/^STKDelay_tick(STKDelay d, REAL input) {$/
+STKFilt_clear	stkstuff.c	/^STKFilt_clear(STKFilt f) {$/
+STKFilt_get_gain	stkstuff.c	/^STKFilt_get_gain(STKFilt f, REAL gain) {$/
+STKFilt_last_out	stkstuff.c	/^STKFilt_last_out(STKFilt f) {$/
+STKFilt_set_coeffs	stkstuff.c	/^STKFilt_set_coeffs(STKFilt f,$/
+STKFilt_set_denominator	stkstuff.c	/^STKFilt_set_denominator(STKFilt f,$/
+STKFilt_set_gain	stkstuff.c	/^STKFilt_set_gain(STKFilt f, REAL gain) {$/
+STKFilt_set_numerator	stkstuff.c	/^STKFilt_set_numerator(STKFilt f,$/
+STKFilt_tick	stkstuff.c	/^STKFilt_tick(STKFilt f, REAL input) {$/
+SVfill	bufvec.c	/^SVfill(SV sv, REAL val) {$/
+SpeechProcessor	speechproc.c	/^SpeechProcessor(SpeechProc sp) {$/
+SpotTone	spottone.c	/^SpotTone(SpotToneGen st) {$/
+SpotToneOff	spottone.c	/^SpotToneOff(SpotToneGen st) {$/
+SpotToneOn	spottone.c	/^SpotToneOn(SpotToneGen st) {$/
+Thunk_lookup	thunk.c	/^Thunk_lookup(CTB ctb, char *key) {$/
+WSCLookup	wscompand.c	/^WSCLookup(WSCompander wsc, REAL x) {$/
+WSCReset	wscompand.c	/^WSCReset(WSCompander wsc, REAL fac) {$/
+WSCompand	wscompand.c	/^WSCompand(WSCompander wsc) {$/
+WaveShape	waveshape.c	/^WaveShape(WaveShaper wvs) {$/
+_ISOband_t	isoband.c	/^struct _ISOband_t {$/
+_bail	halfband.c	/^_bail(int where) {$/
+_hb_ap_proc	halfband.c	/^_hb_ap_proc(hb_ap_t *this, REAL inp) {$/
+_keyer_logic	iambic-keyer-e.c	/^struct _keyer_logic {$/
+_keyer_state	iambic-keyer-e.c	/^struct _keyer_state {$/
+_phasemod	oscillator.c	/^_phasemod(double angle) {$/
+_safealloc	halfband.c	/^_safealloc(int num, int size, int where) {$/
+_safefree	halfband.c	/^_safefree(char *p) { if (p) free(p); }$/
+afil	lmadf.c	/^#define afil(n) (lms->adaptive_filter[(n)])$/
+audio_callback	sdr-main.c	/^audio_callback(jack_nframes_t nframes, void *arg) /
+blms_adapt	lmadf.c	/^blms_adapt(BLMS blms) {$/
+bump	lmadf.c	/^#define bump(n) (((n) + (lms->mask)) & (lms->mask)/
+closeup	sdr-main.c	/^closeup(void) {$/
+compute_spectrum	spectrum.c	/^compute_spectrum(SpecBlock *sb) {$/
+copy_and_clean	port-clients.c	/^copy_and_clean(dttsp_port_client_t *cp, char *cmds/
+correctIQ	correctIQ.c	/^correctIQ(CXB sigbuf, IQ iq) {$/
+create_globals	sdr-main.c	/^create_globals(void) {$/
+dB2lin	update.c	/^dB2lin(REAL dB) { return pow(10.0, dB \/ 20.0); }$/
+delAMD	am_demod.c	/^delAMD(AMD am) {$/
+delCWToneGen	cwtones.c	/^delCWToneGen(CWToneGen cwt) {$/
+delCXB	bufvec.c	/^delCXB(CXB p) {$/
+delCorrectIQ	correctIQ.c	/^delCorrectIQ(IQ iq) { safefree((char *) iq); }$/
+delDCBlocker	dcblock.c	/^delDCBlocker(DCBlocker dcb) {$/
+delDttSPAgc	dttspagc.c	/^delDttSPAgc(DTTSPAGC a) {$/
+delEQ	graphiceq.c	/^delEQ (EQ a) {$/
+delFIR_COMPLEX	filter.c	/^delFIR_COMPLEX(ComplexFIR p) {$/
+delFIR_REAL	filter.c	/^delFIR_REAL(RealFIR p) {$/
+delFMD	fm_demod.c	/^delFMD(FMD fm) {$/
+delFiltOvSv	ovsv.c	/^delFiltOvSv(FiltOvSv p) {$/
+delFilterBank	filterbank.c	/^delFilterBank(FilterBank p)$/
+delHalfBander	halfband.c	/^delHalfBander(HalfBander h) {$/
+delHilbert	hilbert.c	/^delHilbert(Hilbert h) {$/
+delHilsim	hilbert.c	/^delHilsim(Hilsim h) {$/
+delKeyerLogic	iambic-keyer-e.c	/^delKeyerLogic(KeyerLogic kl) {$/
+delKeyerState	iambic-keyer-e.c	/^delKeyerState(KeyerState ks) {$/
+delOSC	oscillator.c	/^delOSC(OSC p) {$/
+delPolyPhaseFIR	resample.c	/^delPolyPhaseFIR(ResSt r) {$/
+delRLB	bufvec.c	/^delRLB(RLB p) {$/
+delSPLIT	splitfields.c	/^delSPLIT(SPLIT s) {$/
+delSTKDelay	stkstuff.c	/^delSTKDelay(STKDelay d) {$/
+delSTKFilt	stkstuff.c	/^delSTKFilt(STKFilt f) {$/
+delSV	bufvec.c	/^delSV(SV sv) {$/
+delSpeechProc	speechproc.c	/^delSpeechProc(SpeechProc sp) {$/
+delSpotToneGen	spottone.c	/^delSpotToneGen(SpotToneGen st) {$/
+delWSCompander	wscompand.c	/^delWSCompander(WSCompander wsc) {$/
+delWaveShaper	waveshape.c	/^delWaveShaper(WaveShaper wvs) {$/
+del_blms	lmadf.c	/^del_blms(BLMS blms) {$/
+del_dttsp_port_client	port-clients.c	/^del_dttsp_port_client(dttsp_port_client_t *cp) {$/
+del_hb_ap	halfband.c	/^del_hb_ap(hb_ap_t *this) { _safefree((char *) this/
+del_hb_ap_casc	halfband.c	/^del_hb_ap_casc(hb_ap_casc_t *this) {$/
+del_hb_filt	halfband.c	/^del_hb_filt(hb_filt_t *this) {$/
+del_lmsr	lmadf.c	/^del_lmsr(LMSR lms) {$/
+del_nb	noiseblanker.c	/^del_nb(NB nb) { if (nb) safefree((char *) nb); }$/
+delvec_COMPLEX	bufvec.c	/^delvec_COMPLEX(COMPLEX *vec) {$/
+delvec_COMPLEX_fftw	bufvec.c	/^delvec_COMPLEX_fftw(COMPLEX *vec) {$/
+delvec_IMAG	bufvec.c	/^delvec_IMAG(IMAG *vec) {$/
+delvec_REAL	bufvec.c	/^delvec_REAL(REAL *vec) {$/
+dem	am_demod.c	/^dem(AMD am) {$/
+destroy_globals	sdr-main.c	/^destroy_globals(void) {$/
+destroy_workspace	sdr.c	/^destroy_workspace(void) {$/
+diff_tv	banal.c	/^diff_tv(struct timeval *ta, struct timeval *tb) {$/
+dlay	lmadf.c	/^#define dlay(n) (lms->delay_line[(n)])$/
+do_rx	sdr.c	/^do_rx(int k) {$/
+do_rx_AM	sdr.c	/^do_rx_AM(int k) {$/
+do_rx_DRM	sdr.c	/^do_rx_DRM(int k) {}$/
+do_rx_FM	sdr.c	/^do_rx_FM(int k) { FMDemod(rx[k]->fm.gen); }$/
+do_rx_NIL	sdr.c	/^do_rx_NIL(int k) {$/
+do_rx_SBCW	sdr.c	/^do_rx_SBCW(int k) {$/
+do_rx_SPEC	sdr.c	/^do_rx_SPEC(int k) {}$/
+do_rx_meter	sdr.c	/^do_rx_meter(int k, CXB buf, int tap) {$/
+do_rx_post	sdr.c	/^do_rx_post(int k) {$/
+do_rx_pre	sdr.c	/^do_rx_pre(int k) {$/
+do_rx_spectrum	sdr.c	/^do_rx_spectrum(int k, CXB buf, int type) {$/
+do_rx_squelch	sdr.c	/^do_rx_squelch(int k) {$/
+do_tx	sdr.c	/^do_tx(void) {$/
+do_tx_AM	sdr.c	/^do_tx_AM(void) {$/
+do_tx_FM	sdr.c	/^do_tx_FM(void) {$/
+do_tx_NIL	sdr.c	/^do_tx_NIL(void) {$/
+do_tx_SBCW	sdr.c	/^do_tx_SBCW(void) {$/
+do_tx_meter	sdr.c	/^do_tx_meter(CXB buf, TXMETERTYPE mt) {$/
+do_tx_post	sdr.c	/^do_tx_post(void) {$/
+do_tx_pre	sdr.c	/^do_tx_pre(void) {$/
+do_tx_spectrum	sdr.c	/^do_tx_spectrum(CXB buf) {$/
+do_tx_squelch	sdr.c	/^do_tx_squelch(void) {$/
+do_update	update.c	/^do_update(char *str, FILE *log) {$/
+dump_CX	bufvec.c	/^dump_CX(FILE * fp, char *head, COMPLEX *ptr, int b/
+dump_IMAG	bufvec.c	/^dump_IMAG(FILE * fp, char *head, IMAG *ptr, int be/
+dump_REAL	bufvec.c	/^dump_REAL(FILE * fp, char *head, REAL *ptr, int be/
+efopen	banal.c	/^efopen(char *path, char *mode) {$/
+efreopen	banal.c	/^efreopen(char *path, char *mode, FILE * strm) {$/
+execute	sdr-main.c	/^execute(void) {$/
+f2x	update.c	/^f2x(REAL f) {$/
+fast_atan2	fastrig.c	/^fast_atan2(REAL y, REAL x) {$/
+fast_cos	fastrig.c	/^fast_cos(REAL x) {$/
+fast_sin	fastrig.c	/^fast_sin(REAL x) {$/
+fdsize	banal.c	/^fdsize(int fd) {$/
+fetch_meter	port-clients.c	/^fetch_meter(dttsp_port_client_t *cp, int *label, f/
+fetch_spectrum	port-clients.c	/^fetch_spectrum(dttsp_port_client_t *cp,$/
+filesize	banal.c	/^filesize(char *path) {$/
+filter_OvSv	ovsv.c	/^filter_OvSv(FiltOvSv pflt) {$/
+find_rcfile	banal.c	/^find_rcfile(char *base) {$/
+finish_spectrum	spectrum.c	/^finish_spectrum(SpecBlock *sb) {$/
+fmt_tv	banal.c	/^fmt_tv(struct timeval *tv) {$/
+for	dttspagc.c	/^for (;;) {$/
+gcd	banal.c	/^gcd(int u, int v) {$/
+getANF	update.c	/^getANF(int n, char **p) {$/
+getANR	update.c	/^getANR(int n, char **p) {$/
+getBIN	update.c	/^getBIN(int n, char **p) {$/
+getBlkANF	update.c	/^getBlkANF(int n, char **p) {$/
+getBlkNR	update.c	/^getBlkNR(int n, char **p) {$/
+getBuflen	update.c	/^getBuflen(int n, char **p) {$/
+getDCBlock	update.c	/^getDCBlock(int n, char **p) {$/
+getGrphRXEQ	update.c	/^getGrphRXEQ(int n, char **p) {$/
+getGrphTXEQ	update.c	/^getGrphTXEQ(int n, char **p) {$/
+getNB	update.c	/^getNB(int n, char **p) {$/
+getRXAGC	update.c	/^getRXAGC(int n, char **p) {$/
+getRXCompand	update.c	/^getRXCompand(int n, char **p) {$/
+getRXCount	update.c	/^getRXCount(int n, char **p) {$/
+getRXFilter	update.c	/^getRXFilter(int n, char **p) {$/
+getRXGain	update.c	/^getRXGain(int n, char **p) {$/
+getRXIQ	update.c	/^getRXIQ(int n, char **p) {$/
+getRXListen	update.c	/^getRXListen(int n, char **p) {$/
+getRXMode	update.c	/^getRXMode(int n, char **p) {$/
+getRXOsc	update.c	/^getRXOsc(int n, char **p) {$/
+getRXPan	update.c	/^getRXPan(int n, char **p) {$/
+getRXSquelch	update.c	/^getRXSquelch(int n, char **p) {$/
+getSDROM	update.c	/^getSDROM(int n, char **p) {$/
+getSpectrumInfo	update.c	/^getSpectrumInfo(int n, char **p) {$/
+getSpotTone	update.c	/^getSpotTone(int n, char **p) {$/
+getTEST	update.c	/^getTEST(int n, char **p) {$/
+getTRX	update.c	/^getTRX(int n, char **p) {$/
+getTXCarrierLevel	update.c	/^getTXCarrierLevel(int n, char **p) {$/
+getTXCompand	update.c	/^getTXCompand(int n, char **p) {$/
+getTXFilter	update.c	/^getTXFilter(int n, char **p) {$/
+getTXGain	update.c	/^getTXGain(int n, char **p) {$/
+getTXIQ	update.c	/^getTXIQ(int n, char **p) {$/
+getTXLeveler	update.c	/^getTXLeveler(int n, char **p) {$/
+getTXMeterMode	update.c	/^getTXMeterMode(int n, char **p) {$/
+getTXMode	update.c	/^getTXMode(int n, char **p) {$/
+getTXOsc	update.c	/^getTXOsc(int n, char **p) {$/
+getTXSpeechCompression	update.c	/^getTXSpeechCompression(int n, char **p) {$/
+getTXSquelch	update.c	/^getTXSquelch(int n, char **p) {$/
+getTXWaveShape	update.c	/^getTXWaveShape(int n, char **p) {$/
+get_morse	keyboard-keyer.c	/^get_morse(int c) {$/
+gethold	sdr-main.c	/^gethold(void) {$/
+gmean	update.c	/^gmean(REAL x, REAL y) { return sqrt(x * y); }$/
+graphiceq	graphiceq.c	/^graphiceq(EQ a) {$/
+hash	banal.c	/^hash(unsigned char *str) {$/
+hb_ap_casc_proc	halfband.c	/^hb_ap_casc_proc(hb_ap_casc_t *this, REAL inp) {$/
+hb_ap_proc	halfband.c	/^hb_ap_proc(hb_ap_t *this, REAL inp) {$/
+hb_filt_proc	halfband.c	/^hb_filt_proc(hb_filt_t *this, REAL inp) {$/
+hilbert_transform	hilbert.c	/^hilbert_transform(Hilbert h) {$/
+hilsim_transform	hilbert.c	/^hilsim_transform(Hilsim h) {$/
+hinterp_vec	banal.c	/^hinterp_vec(REAL *u, int m, REAL *v, int n) {$/
+if	dttspagc.c	/^if (signal_too_big())$/
+in_blocks	banal.c	/^in_blocks(int count, int block_size) {$/
+init_pll	am_demod.c	/^init_pll(AMD am,$/
+init_spectrum	spectrum.c	/^init_spectrum(SpecBlock *sb) {$/
+inlinecmd	keyboard-keyer.c	/^inlinecmd(char *buf, int len) {$/
+jack_callback	iambic-keyer-e.c	/^jack_callback(jack_nframes_t nframes, void *arg) {/
+jack_ringbuffer_clear	iambic-keyer-e.c	/^jack_ringbuffer_clear(jack_ringbuffer_t *ring, int/
+jack_ringbuffer_restart	iambic-keyer-e.c	/^jack_ringbuffer_restart(jack_ringbuffer_t *ring, i/
+jack_shutdown	iambic-keyer-e.c	/^jack_shutdown(void *arg) {}$/
+jack_xrun	iambic-keyer-e.c	/^jack_xrun(void *arg) {$/
+key_thread	iambic-keyer-e.c	/^key_thread(void) {$/
+klogic	iambic-keyer-e.c	/^klogic(KeyerLogic kl,$/
+lcm	banal.c	/^lcm(int u, int v) {$/
+lmsr_adapt	lmadf.c	/^lmsr_adapt(LMSR lms) {$/
+lmsr_adapt_i	lmadf.c	/^lmsr_adapt_i(LMSR lms) {$/
+lmsr_adapt_n	lmadf.c	/^lmsr_adapt_n(LMSR lms) {$/
+make_sem	sdr-main.c	/^make_sem(char *id, char *path) {$/
+makewindow	window.c	/^makewindow(Windowtype type, int size, REAL *window/
+max	dttspagc.c	/^max(REAL a, REAL b) { return a > b ? a : b; }$/
+meter_thread	sdr-main.c	/^meter_thread(void) {$/
+min	dttspagc.c	/^min(REAL a, REAL b) { return a < b ? a : b; }$/
+nblock2	banal.c	/^nblock2(int n) { return 1 << npoof2(n); }$/
+newAMD	am_demod.c	/^newAMD(REAL samprate,$/
+newCWToneGen	cwtones.c	/^newCWToneGen(REAL gain,	\/\/ dB$/
+newCXB	bufvec.c	/^newCXB(int size, COMPLEX *base, char *tag) {$/
+newCorrectIQ	correctIQ.c	/^newCorrectIQ(REAL phase, REAL gain) {$/
+newDCBlocker	dcblock.c	/^newDCBlocker(CXB buf) {$/
+newDttSPAgc	dttspagc.c	/^newDttSPAgc(AGCMODE mode,$/
+newFIR_Bandpass_COMPLEX	filter.c	/^newFIR_Bandpass_COMPLEX(REAL lo, REAL hi, REAL sr,/
+newFIR_Bandpass_REAL	filter.c	/^newFIR_Bandpass_REAL(REAL lo, REAL hi, REAL sr, in/
+newFIR_Bandstop_COMPLEX	filter.c	/^newFIR_Bandstop_COMPLEX(REAL lo, REAL hi, REAL sr,/
+newFIR_Bandstop_REAL	filter.c	/^newFIR_Bandstop_REAL(REAL lo, REAL hi, REAL sr, in/
+newFIR_COMPLEX	filter.c	/^newFIR_COMPLEX(int size, char *tag) {$/
+newFIR_Highpass_COMPLEX	filter.c	/^newFIR_Highpass_COMPLEX(REAL cutoff, REAL sr, int /
+newFIR_Highpass_REAL	filter.c	/^newFIR_Highpass_REAL(REAL cutoff, REAL sr, int siz/
+newFIR_Hilbert_COMPLEX	filter.c	/^newFIR_Hilbert_COMPLEX(REAL lo, REAL hi, REAL sr, /
+newFIR_Hilbert_REAL	filter.c	/^newFIR_Hilbert_REAL(REAL lo, REAL hi, REAL sr, int/
+newFIR_Lowpass_COMPLEX	filter.c	/^newFIR_Lowpass_COMPLEX(REAL cutoff, REAL sr, int s/
+newFIR_Lowpass_REAL	filter.c	/^newFIR_Lowpass_REAL(REAL cutoff, REAL sr, int size/
+newFIR_REAL	filter.c	/^newFIR_REAL(int size, char *tag) {$/
+newFMD	fm_demod.c	/^newFMD(REAL samprate,$/
+newFiltOvSv	ovsv.c	/^newFiltOvSv(COMPLEX *coefs, int ncoef, int pbits) /
+newFilterBank	filterbank.c	/^newFilterBank(REAL SampleRate,$/
+newHalfBander	halfband.c	/^newHalfBander(int ord, BOOLEAN steep, CXB ibuf, CX/
+newHilbert	hilbert.c	/^newHilbert(CXB ibuf, CXB obuf, REAL rate) {$/
+newHilsim	hilbert.c	/^newHilsim(CXB ibuf, CXB obuf) {$/
+newKeyerLogic	iambic-keyer-e.c	/^newKeyerLogic(void) {$/
+newKeyerState	iambic-keyer-e.c	/^newKeyerState(void) {$/
+newOSC	oscillator.c	/^newOSC(int size,$/
+newPolyPhaseFIR	resample.c	/^newPolyPhaseFIR(CXB source,$/
+newRLB	bufvec.c	/^newRLB(int size, REAL *base, char *tag) {$/
+newSPLIT	splitfields.c	/^newSPLIT(void) {$/
+newSTKDelay	stkstuff.c	/^newSTKDelay(int delay, int max_delay) {$/
+newSTKDelayA	stkstuff.c	/^newSTKDelayA(REAL delay, int max_delay) {$/
+newSTKFilt	stkstuff.c	/^newSTKFilt(REAL *b, int nb, REAL *a, int na) {$/
+newSV	bufvec.c	/^newSV(int size, REAL *base, char *tag) {$/
+newSpeechProc	speechproc.c	/^newSpeechProc(REAL K, REAL MaxCompression, COMPLEX/
+newSpotToneGen	spottone.c	/^newSpotToneGen(REAL gain,	\/\/ dB$/
+newWSCompander	wscompand.c	/^newWSCompander(int npts, REAL fac, CXB buff) {$/
+newWaveShaper	waveshape.c	/^newWaveShaper(CXB buff) {$/
+new_EQ	graphiceq.c	/^new_EQ (CXB d, REAL samplerate, int pbits) {$/
+new_blms	lmadf.c	/^new_blms(CXB signal,$/
+new_dttsp_port_client	port-clients.c	/^new_dttsp_port_client(int port, int inbound) {$/
+new_hb_ap	halfband.c	/^new_hb_ap(REAL coef) {$/
+new_hb_ap_casc	halfband.c	/^new_hb_ap_casc(REAL *coef, int n) {$/
+new_hb_filt	halfband.c	/^new_hb_filt(int ord, int steep) {$/
+new_lmsr	lmadf.c	/^new_lmsr(CXB signal,$/
+new_noiseblanker	noiseblanker.c	/^new_noiseblanker(CXB sigbuf, REAL threshold) {$/
+newvec_COMPLEX	bufvec.c	/^newvec_COMPLEX(int size, char *tag) {$/
+newvec_COMPLEX_fftw	bufvec.c	/^newvec_COMPLEX_fftw(int size, char *tag) {$/
+newvec_IMAG	bufvec.c	/^newvec_IMAG(int size, char *tag) {$/
+newvec_REAL	bufvec.c	/^newvec_REAL(int size, char *tag) {$/
+nilfunc	banal.c	/^nilfunc(void) {}$/
+no_rx_squelch	sdr.c	/^no_rx_squelch(int k) {$/
+no_tx_squelch	sdr.c	/^no_tx_squelch(void) {$/
+noiseblanker	noiseblanker.c	/^noiseblanker(NB nb) {$/
+normalize_vec_COMPLEX	bufvec.c	/^normalize_vec_COMPLEX(COMPLEX *z, int n) {$/
+normalize_vec_REAL	bufvec.c	/^normalize_vec_REAL(REAL *v, int n) {$/
+now_tv	banal.c	/^now_tv(void) {$/
+npoof2	banal.c	/^npoof2(int n) {$/
+phasemod	fastrig.c	/^phasemod(REAL angle) {$/
+pll	am_demod.c	/^pll(AMD am, COMPLEX sig) {$/
+poll_thread	iambic-keyer-e.c	/^poll_thread(void) {$/
+popcnt	banal.c	/^popcnt(int k) {$/
+process_samples	sdr.c	/^process_samples(float *bufl, float *bufr, int n) {/
+process_samples_thread	sdr-main.c	/^process_samples_thread(void) {$/
+process_updates_thread	sdr-main.c	/^process_updates_thread(void) {$/
+puthold	sdr-main.c	/^puthold(void) {$/
+ransig	sdr-main.c	/^#define ransig(x) ((drand48() * 0.5 - 1.0) * (x))$/
+read_iambic_key	iambic-keyer-e.c	/^read_iambic_key(KeyerState ks, KeyerLogic kl, doub/
+read_key	iambic-keyer-e.c	/^read_key(double del) {$/
+read_straight_key	iambic-keyer-e.c	/^read_straight_key(KeyerState ks) {$/
+reader_thread	keyboard-keyer.c	/^reader_thread(void) {$/
+reinit_spectrum	spectrum.c	/^reinit_spectrum(SpecBlock *sb) {$/
+replay_updates	update.c	/^replay_updates(void) {$/
+reqDump	update.c	/^reqDump(int n, char **p) {$/
+reqMeter	update.c	/^reqMeter(int n, char **p) {$/
+reqRXMeter	update.c	/^reqRXMeter(int n, char **p) {$/
+reqScope	update.c	/^reqScope(int n, char **p) {$/
+reqSpectrum	update.c	/^reqSpectrum(int n, char **p) {$/
+reqTXMeter	update.c	/^reqTXMeter(int n, char **p) {$/
+resetDCBlocker	dcblock.c	/^resetDCBlocker(DCBlocker dcb) {$/
+reset_OvSv	ovsv.c	/^reset_OvSv(FiltOvSv pflt) {$/
+reset_counters	sdr.c	/^reset_counters(void) {$/
+reset_for_buflen	sdr-main.c	/^reset_for_buflen(int new_buflen) {$/
+reset_meters	sdr.c	/^reset_meters(void) {$/
+reset_spectrum	sdr.c	/^reset_spectrum(void) {$/
+resetparam	keyboard-keyer.c	/^resetparam(void) {$/
+ringb_clear	ringb.c	/^ringb_clear(ringb_t *rb, size_t nbytes) {$/
+ringb_create	ringb.c	/^ringb_create(size_t sz2) {$/
+ringb_create_usemem	ringb.c	/^ringb_create_usemem(char *usemem, size_t sz2) {$/
+ringb_float_clear	ringb.c	/^ringb_float_clear(ringb_float_t *rb, size_t nfloat/
+ringb_float_create	ringb.c	/^ringb_float_create(size_t sz2) {$/
+ringb_float_free	ringb.c	/^ringb_float_free(ringb_float_t *rb) {$/
+ringb_float_read	ringb.c	/^ringb_float_read(ringb_float_t *rb, float *dest, s/
+ringb_float_read_space	ringb.c	/^ringb_float_read_space(const ringb_float_t *rb) {$/
+ringb_float_reset	ringb.c	/^ringb_float_reset(ringb_float_t *rb) {$/
+ringb_float_restart	ringb.c	/^ringb_float_restart(ringb_float_t *rb, size_t nflo/
+ringb_float_write	ringb.c	/^ringb_float_write(ringb_float_t *rb, const float */
+ringb_float_write_space	ringb.c	/^ringb_float_write_space(const ringb_float_t *rb) {/
+ringb_free	ringb.c	/^ringb_free(ringb_t *rb) {$/
+ringb_get_read_vector	ringb.c	/^ringb_get_read_vector(const ringb_t *rb, ringb_dat/
+ringb_get_write_vector	ringb.c	/^ringb_get_write_vector(const ringb_t *rb, ringb_da/
+ringb_peek	ringb.c	/^ringb_peek(ringb_t *rb, char *dest, size_t cnt) {$/
+ringb_read	ringb.c	/^ringb_read(ringb_t *rb, char *dest, size_t cnt) {$/
+ringb_read_advance	ringb.c	/^ringb_read_advance(ringb_t *rb, size_t cnt) {$/
+ringb_read_space	ringb.c	/^ringb_read_space(const ringb_t *rb) {$/
+ringb_reset	ringb.c	/^ringb_reset(ringb_t *rb) {$/
+ringb_restart	ringb.c	/^ringb_restart(ringb_t *rb, size_t nbytes) {$/
+ringb_write	ringb.c	/^ringb_write(ringb_t *rb, const char *src, size_t c/
+ringb_write_advance	ringb.c	/^ringb_write_advance(ringb_t *rb, size_t cnt) {$/
+ringb_write_space	ringb.c	/^ringb_write_space(const ringb_t *rb) {$/
+runAnalysisFilterBank	filterbank.c	/^runAnalysisFilterBank(FilterBank p)$/
+run_mute	sdr-main.c	/^run_mute(void) {$/
+run_pass	sdr-main.c	/^run_pass(void) { uni->tick++; }$/
+run_play	sdr-main.c	/^run_play(void) {$/
+run_swch	sdr-main.c	/^run_swch(void) {$/
+run_test	sdr-main.c	/^run_test(void) {$/
+safealloc	bufvec.c	/^safealloc(int count, int nbytes, char *tag) {$/
+safefree	bufvec.c	/^safefree(char *p) {$/
+safememcurrcount	bufvec.c	/^safememcurrcount(void) { return _safemem_currcount/
+safememreset	bufvec.c	/^safememreset(void) { _safemem_currcount = 0; }$/
+send_command	port-clients.c	/^send_command(dttsp_port_client_t *cp, char *cmdstr/
+send_silence	iambic-keyer-e.c	/^send_silence(void) {$/
+send_sound	keyboard-keyer.c	/^send_sound(COMPLEX *buff, int len) {$/
+send_tone	iambic-keyer-e.c	/^send_tone(void) {$/
+setANF	update.c	/^setANF(int n, char **p) {$/
+setANFvals	update.c	/^setANFvals(int n, char **p) {$/
+setBIN	update.c	/^setBIN(int n, char **p) {$/
+setBlkANF	update.c	/^setBlkANF(int n, char **p) {$/
+setBlkANFval	update.c	/^setBlkANFval(int n, char **p) {$/
+setBlkNR	update.c	/^setBlkNR(int n, char **p) {$/
+setBlkNRval	update.c	/^setBlkNRval(int n, char **p) {$/
+setCWToneGenVals	cwtones.c	/^setCWToneGenVals(CWToneGen cwt, REAL gain, REAL fr/
+setCompand	update.c	/^setCompand(int n, char **p) {$/
+setCompandSt	update.c	/^setCompandSt(int n, char **p) {$/
+setDCBlock	update.c	/^setDCBlock(int n, char **p) {$/
+setDCBlockSt	update.c	/^setDCBlockSt(int n, char **p) {$/
+setFilter	update.c	/^setFilter(int n, char **p) {$/
+setFinished	update.c	/^setFinished(int n, char **p) {$/
+setGain	update.c	/^setGain(int n, char **p) {$/
+setGrphRXEQ10	update.c	/^setGrphRXEQ10(int n, char **p) {$/
+setGrphRXEQ3	update.c	/^setGrphRXEQ3(int n, char **p) {$/
+setGrphRXEQcmd	update.c	/^setGrphRXEQcmd(int n, char **p) {$/
+setGrphTXEQ10	update.c	/^setGrphTXEQ10(int n, char **p) {$/
+setGrphTXEQ3	update.c	/^setGrphTXEQ3(int n, char **p) {$/
+setGrphTXEQcmd	update.c	/^setGrphTXEQcmd(int n, char **p) {$/
+setMode	update.c	/^setMode(int n, char **p) {$/
+setNB	update.c	/^setNB(int n, char **p) {$/
+setNBvals	update.c	/^setNBvals(int n, char **p) {$/
+setNR	update.c	/^setNR(int n, char **p) {$/
+setNRvals	update.c	/^setNRvals(int n, char **p) {$/
+setNewBuflen	update.c	/^setNewBuflen(int n, char **p) {$/
+setNotch160	update.c	/^setNotch160(int n, char **p) {$/
+setOsc	update.c	/^setOsc(int n, char **p) {$/
+setRXAGC	update.c	/^setRXAGC(int n, char **p) {$/
+setRXAGCAttack	update.c	/^setRXAGCAttack(int n, char **p) {$/
+setRXAGCCompression	update.c	/^setRXAGCCompression(int n, char **p) {$/
+setRXAGCDecay	update.c	/^setRXAGCDecay(int n, char **p) {$/
+setRXAGCFix	update.c	/^setRXAGCFix(int n, char **p) {$/
+setRXAGCHang	update.c	/^setRXAGCHang(int n, char **p) {$/
+setRXAGCHangThreshold	update.c	/^setRXAGCHangThreshold(int h, char **p) {$/
+setRXAGCLimit	update.c	/^setRXAGCLimit(int n, char **p) {$/
+setRXAGCSlope	update.c	/^setRXAGCSlope(int n, char **p) {$/
+setRXAGCTop	update.c	/^setRXAGCTop(int n, char **p) {$/
+setRXFiltCoefs	update.c	/^setRXFiltCoefs(int n, char **p) {$/
+setRXFilter	update.c	/^setRXFilter(int n, char **p) {$/
+setRXListen	update.c	/^setRXListen(int n, char **p) {$/
+setRXOff	update.c	/^setRXOff(int n, char **p) {$/
+setRXOn	update.c	/^setRXOn(int n, char **p) {$/
+setRXPan	update.c	/^setRXPan(int n, char **p) {$/
+setRingBufferOffset	update.c	/^setRingBufferOffset(int n, char **p) {$/
+setRingBufferReset	update.c	/^setRingBufferReset(int n, char **p) {$/
+setRunState	update.c	/^setRunState(int n, char **p) {$/
+setSDROM	update.c	/^setSDROM(int n, char **p) {$/
+setSDROMvals	update.c	/^setSDROMvals(int n, char **p) {$/
+setSNDSResetSize	update.c	/^setSNDSResetSize(int n, char **p) {$/
+setSWCH	update.c	/^setSWCH(int n, char **p) {$/
+setSpectrumPolyphase	update.c	/^setSpectrumPolyphase(int n, char **p) {$/
+setSpectrumType	update.c	/^setSpectrumType(int n, char **p) {$/
+setSpectrumWindow	update.c	/^setSpectrumWindow(int n, char **p) {$/
+setSpotTone	update.c	/^setSpotTone(int n, char **p) {$/
+setSpotToneGenVals	spottone.c	/^setSpotToneGenVals(SpotToneGen st, REAL gain, REAL/
+setSpotToneVals	update.c	/^setSpotToneVals(int n, char **p) {$/
+setSquelch	update.c	/^setSquelch(int n, char **p) {$/
+setSquelchSt	update.c	/^setSquelchSt(int n, char **p) {$/
+setTEST	update.c	/^setTEST(int n, char **p) {$/
+setTRX	update.c	/^setTRX(int n, char **p) {$/
+setTXAGCFF	update.c	/^setTXAGCFF(int n, char **p) {$/
+setTXAGCFFCompression	update.c	/^setTXAGCFFCompression(int n, char **p) {$/
+setTXCarrierLevel	update.c	/^setTXCarrierLevel(int n, char **p) {$/
+setTXCompand	update.c	/^setTXCompand(int n, char **p) {$/
+setTXCompandSt	update.c	/^setTXCompandSt(int n, char **p) {$/
+setTXFiltCoefs	update.c	/^setTXFiltCoefs(int n, char **p) {$/
+setTXFilter	update.c	/^setTXFilter(int n, char **p) {$/
+setTXLevelerAttack	update.c	/^setTXLevelerAttack(int n, char **p) {$/
+setTXLevelerDecay	update.c	/^setTXLevelerDecay(int n, char **p) {$/
+setTXLevelerHang	update.c	/^setTXLevelerHang(int n, char **p) {$/
+setTXLevelerSt	update.c	/^setTXLevelerSt(int n, char **p) {$/
+setTXLevelerTop	update.c	/^setTXLevelerTop(int n, char **p) {$/
+setTXMeterMode	update.c	/^setTXMeterMode(int n, char **p) {$/
+setTXSpeechCompression	update.c	/^setTXSpeechCompression(int n, char **p) {$/
+setTXSpeechCompressionGain	update.c	/^setTXSpeechCompressionGain(int n, char **p) {$/
+setTXSquelch	update.c	/^setTXSquelch(int n, char **p) {$/
+setTXSquelchSt	update.c	/^setTXSquelchSt(int n, char **p) {$/
+setTXWaveShapeFunc	update.c	/^setTXWaveShapeFunc(int n, char **p) {$/
+setTXWaveShapeSt	update.c	/^setTXWaveShapeSt(int n, char **p) {$/
+setTestNoise	update.c	/^setTestNoise(int n, char **p) {$/
+setTestThru	update.c	/^setTestThru(int n, char **p) {$/
+setTestTone	update.c	/^setTestTone(int n, char **p) {$/
+setTestTwoTone	update.c	/^setTestTwoTone(int n, char **p) {$/
+setWaveShaper	waveshape.c	/^setWaveShaper(WaveShaper wvs, int npts, REAL *tbl)/
+setcorrectIQ	update.c	/^setcorrectIQ(int n, char **p) {$/
+setcorrectIQgain	update.c	/^setcorrectIQgain(int n, char **p) {$/
+setcorrectIQphase	update.c	/^setcorrectIQphase(int n, char **p) {$/
+setcorrectTXIQ	update.c	/^setcorrectTXIQ(int n, char **p) {$/
+setcorrectTXIQgain	update.c	/^setcorrectTXIQgain(int n, char **p) {$/
+setcorrectTXIQphase	update.c	/^setcorrectTXIQphase(int n, char **p) {$/
+setfixedAGC	update.c	/^setfixedAGC(int n, char **p) {$/
+setup	sdr-main.c	/^setup(int argc, char **argv) {$/
+setup_all	sdr.c	/^setup_all(REAL samplerate,$/
+setup_defaults	sdr-main.c	/^setup_defaults(void) {$/
+setup_from_commandline	sdr-main.c	/^setup_from_commandline(int argc, char **argv) {$/
+setup_local_audio	sdr-main.c	/^setup_local_audio(void) {$/
+setup_rx	sdr.c	/^setup_rx(int k) {$/
+setup_system_audio	sdr-main.c	/^setup_system_audio(void) {$/
+setup_threading	sdr-main.c	/^setup_threading(void) {$/
+setup_tx	sdr.c	/^setup_tx(void) {$/
+setup_updates	sdr-main.c	/^setup_updates(void) {$/
+setup_workspace	sdr.c	/^setup_workspace(REAL samplerate,$/
+should_do_rx_squelch	sdr.c	/^should_do_rx_squelch(int k) {$/
+should_do_tx_squelch	sdr.c	/^should_do_tx_squelch(void) {$/
+since	banal.c	/^since(struct timeval *tv) {$/
+snap_meter_rx	meter.c	/^snap_meter_rx(METERBlock *mb, int label) {$/
+snap_meter_tx	meter.c	/^snap_meter_tx(METERBlock *mb, int label) {$/
+snap_scope	spectrum.c	/^snap_scope(SpecBlock *sb, int label, int stamp) {$/
+snap_spectrum	spectrum.c	/^snap_spectrum(SpecBlock *sb, int label, int stamp)/
+sound_thread	iambic-keyer-e.c	/^sound_thread(void) {$/
+spectrum_thread	sdr-main.c	/^spectrum_thread(void) {$/
+split	splitfields.c	/^split(SPLIT s, char *str) {$/
+spliton	splitfields.c	/^spliton(SPLIT s, char *str, char *delim) {$/
+splitonto	splitfields.c	/^splitonto(SPLIT s, char *str, char *delim, char **/
+ssig	lmadf.c	/^#define ssig(n) (CXBreal(lms->signal,(n)))$/
+ssig_i	lmadf.c	/^#define ssig_i(n) (CXBimag(lms->signal,(n)))$/
+state_watcher_thread	iambic-keyer-e.c	/^state_watcher_thread(void) {$/
+status_message	banal.c	/^status_message(char *msg) {$/
+streq	thunk.c	/^streq(char *p, char *q) {$/
+sum_tv	banal.c	/^sum_tv(struct timeval *ta, struct timeval *tb) {$/
+timed_delay	iambic-keyer-e.c	/^timed_delay(void) {$/
+update_thread	iambic-keyer-e.c	/^update_thread(void) {$/
+usage	sdr-main.c	/^usage(void) {$/
+wrap	lmadf.c	/^#define wrap(n) (((n) + (lms->delay) + (lms->delay/

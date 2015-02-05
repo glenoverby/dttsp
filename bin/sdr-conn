@@ -1,0 +1,6 @@
+#!/bin/sh
+
+jack_connect alsa_pcm:capture_1 sdr:il
+jack_connect alsa_pcm:capture_2 sdr:ir
+jack_connect sdr:ol alsa_pcm:playback_1
+jack_connect sdr:or alsa_pcm:playback_2

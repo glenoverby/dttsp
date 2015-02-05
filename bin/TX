@@ -1,0 +1,27 @@
+
+set -x
+PIDS=""
+
+export SDR_PARMPATH=/dev/shm/TXSDRcommands
+export SDR_NAME=sdr-tx
+export SDR_PARMPORT=19005
+export SDR_SPECPORT=19006
+export SDR_METERPORT=19007
+./sdr-core -s -m &
+PIDS="$PIDS $!"
+sleep 1
+jack_lsp
+jack_connect sdr-tx:ol alsa_pcm:playback_3
+jack_connect sdr-tx:or alsa_pcm:playback_4
+#jack_connect alsa_pcm:capture_1 sdr:il        
+#jack_connect alsa_pcm:capture_2 sdr:ir     
+jack_connect metro:60_bpm sdr-tx:il        
+jack_connect metro:60_bpm sdr-tx:ir
+#socat -v -u PIPE:$SDR_PARMPATH UDP:localhost:$SDR_PARMPORT,connect-timeout=10 &
+#PIDS="$PIDS $!"
+
+echo $PIDS
+echo -n hit return to kill everything:
+read
+kill $PIDS
+

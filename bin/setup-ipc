@@ -1,0 +1,17 @@
+#!/bin/sh
+
+cmdpath=${SDR_PARMPATH:-".SDRcommands"}
+mtrpath=${SDR_METERPATH:-".SDRmeter"}
+specpath=${SDR_SPECPATH:-".SDRspectrum"}
+
+if [ ! -p $cmdpath ]; then
+  mkfifo $cmdpath
+fi
+
+if [ ! -p $mtrpath ]; then
+  mkfifo $mtrpath
+fi
+
+if [ ! -p $specpath ]; then
+  mkfifo $specpath
+fi

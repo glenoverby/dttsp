@@ -1,0 +1,17 @@
+##############################################################################
+# DttSP Environment Variables
+
+# Path to DttSP command FIFO
+export SDR_PARMPATH=/dev/shm/TXSDRcommands
+
+# Path to DttSP meter FIFO
+export SDR_METERPATH=/dev/shm/TXSDRmeter
+
+# Path to DttSP spectrum FIFO
+export SDR_SPECPATH=/dev/shm/TXSDRspectrum
+
+# Sound Card Sampling Rate
+export SDR_DEFRATE=48000
+
+export SDR_NAME=sdr-tx
+

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+CMDPIPE=${SDR_PARMPATH:-/dev/shm/SDRcommands}
+
+while true
+do
+  read -e -p "command: " cmdline
+  if [ $? -ne 0 ]
+  then
+    break
+  fi
+  sendline="$cmdline"
+  echo $sendline
+done | m4 -i /media/disk-1/svn/repos_sdr/linux/branches/ab2kt/dttsp-ng/lib/enums.m4 - >$CMDPIPE

@@ -1,0 +1,27 @@
+#!/bin/sh
+
+cmdpath=.SDRcommands
+mtrpath=.SDRmeter
+specpath=.SDRspectrum
+client=sdr
+
+if [ ! -p $cmdpath ]; then
+  mkfifo $cmdpath
+fi
+if [ ! -p $meterpath ]; then
+  mkfifo $meterpath
+fi
+if [ ! -p $specpath ]; then
+  mkfifo $specpath
+fi
+
+./sdr-core\
+	--client-name=$client\
+	--command-path=$cmdpath\
+	--metering --meter-path=$mtrpath\
+	--spectrum --spectrum-path=$specpath\
+	&
+
+./iambic-keyer -i -w 20 &
+
+# keyboard-keyer -i -w 20 # NB no background since reading tty

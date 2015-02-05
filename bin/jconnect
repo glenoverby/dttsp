@@ -1,0 +1,8 @@
+
+JACKC=jack_connect
+DTTSP_PID=$1
+    $JACKC sdr-$DTTSP_PID:ol alsa_pcm:playback_3
+    $JACKC sdr-$DTTSP_PID:or alsa_pcm:playback_4
+    $JACKC alsa_pcm:capture_1 sdr-$DTTSP_PID:il
+    $JACKC alsa_pcm:capture_2 sdr-$DTTSP_PID:ir
+

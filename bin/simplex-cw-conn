@@ -1,0 +1,22 @@
+#!/bin/sh
+
+jack_connect alsa_pcm:capture_1 sdr:il
+jack_connect alsa_pcm:capture_2 sdr:ir
+jack_connect sdr:ol alsa_pcm:playback_1
+jack_connect sdr:or alsa_pcm:playback_2
+
+##for CW + sidetone w/ hand key or paddles
+jack_disconnect ikyr:ol alsa_pcm:playback_1
+jack_disconnect ikyr:or alsa_pcm:playback_2
+jack_connect ikyr:ol alsa_pcm:playback_3
+jack_connect ikyr:or alsa_pcm:playback_4
+jack_connect ikyr:ol sdr:al
+jack_connect ikyr:or sdr:ar
+
+##for CW + sidetone w/ keyboard
+# jack_disconnect kkyr:ol alsa_pcm:playback_1
+# jack_disconnect kkyr:or alsa_pcm:playback_2
+# jack_connect kkyr:ol alsa_pcm:playback_3
+# jack_connect kkyr:or alsa_pcm:playback_4
+# jack_connect kkyr:ol sdr:al
+# jack_connect kkyr:or sdr:ar

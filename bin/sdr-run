@@ -1,0 +1,5 @@
+#!/bin/sh
+
+./setup-ipc
+./sdr-core
+

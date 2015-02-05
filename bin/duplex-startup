@@ -1,0 +1,45 @@
+#!/bin/sh
+
+rxcmdpath=.RXcommands
+rxmtrpath=.RXmeter
+rxspecpath=.RXspectrum
+rxclient=sdr-rx
+
+if [ ! -p $rxcmdpath ]; then
+  mkfifo $rxcmdpath
+fi
+if [ ! -p $rxmtrpath ]; then
+  mkfifo $rxmtrpath
+fi
+if [ ! -p $rxspecpath ]; then
+  mkfifo $rxspecpath
+fi
+
+txcmdpath=.TXcommands
+txmtrpath=.TXmeter
+txspecpath=.TXspectrum
+txclient=sdr-tx
+
+if [ ! -p $txcmdpath ]; then
+  mkfifo $txcmdpath
+fi
+if [ ! -p $txmtrpath ]; then
+  mkfifo $txmtrpath
+fi
+if [ ! -p $txspecpath ]; then
+  mkfifo $txspecpath
+fi
+
+./sdr-core\
+	--client-name=$rxclient\
+	--command-path=$rxcmdpath\
+	--metering --meter-path=$rxmtrpath\
+	--spectrum --spectrum-path=$rxspecpath\
+	&
+
+./sdr-core\
+	--client-name=$txclient\
+	--command-path=$txcmdpath\
+	--metering --meter-path=$txmtrpath\
+	--spectrum --spectrum-path=$txspecpath\
+	&
