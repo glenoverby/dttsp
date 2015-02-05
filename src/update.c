@@ -717,6 +717,7 @@ getRXAGC(int n, char **p) {
 	  rx[RL]->dttspagc.gen->slope);
 	  
   top->resp.size = strlen(top->resp.buff);
+  return 0;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -764,6 +765,7 @@ getTXLeveler(int n, char **p) {
 	  tx->leveler.gen->slope);
 	  
   top->resp.size = strlen(top->resp.buff);
+  return 0;
 }
 
 /* -------------------------------------------------------------------------- */
