@@ -118,7 +118,7 @@ pll(FMD fm, COMPLEX sig) {
 void
 FMDemod(FMD fm) {
   int i;
-  for (i = 0; i < CXBhave(fm->ibuf); i++) {
+  for (i = 0; i < CXBsize(fm->ibuf); i++) {
     pll(fm, CXBdata(fm->ibuf, i));
     fm->afc = (REAL) (0.9999 * fm->afc + 0.0001 * fm->pll.freq.f);
     CXBreal(fm->obuf, i) =
