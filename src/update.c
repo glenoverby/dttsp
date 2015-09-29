@@ -1585,8 +1585,8 @@ setcorrectIQ(int n, char **p) {
 PRIVATE int
 getRXIQ(int n, char **p) {
   sprintf(top->resp.buff, "getRXIQ %f %f\n",
-	  rx[RL]->iqfix->phase,
-	  rx[RL]->iqfix->gain);
+	  rx[RL]->iqfix->phase[0] * 1000,
+	  (1 - rx[RL]->iqfix->gain[0]) * 1000);
   top->resp.size = strlen(top->resp.buff);
   return 0;
 }
@@ -1594,8 +1594,8 @@ getRXIQ(int n, char **p) {
 PRIVATE int
 getTXIQ(int n, char **p) {
   sprintf(top->resp.buff, "getTXIQ %f %f\n",
-	  tx->iqfix->phase,
-	  tx->iqfix->gain);
+	  tx->iqfix->phase[0] * 1000,
+	  (1 - tx->iqfix->gain[0]) * 1000);
   top->resp.size = strlen(top->resp.buff);
   return 0;
 }
@@ -1611,8 +1611,8 @@ getTXIQ(int n, char **p) {
 PRIVATE int
 setcorrectIQphase(int n, char **p) {
   REAL phase = atof(p[0]);
-  //rx[RL]->iqfix->phase = 0.001 *phaseadjustment;
   int i;																// SV1EIA AIR
+  printf("setcorrectIQphase %f\n", (REAL) (0.001 * phase));
 	for (i = 0; i < DEFSPEC; i++)											// SV1EIA AIR
 	{																	// SV1EIA AIR
 		rx[RL]->iqfix->phase[i] = (REAL) (0.001 * phase);		// SV1EIA AIR
@@ -1632,7 +1632,6 @@ setcorrectIQphase(int n, char **p) {
 PRIVATE int
 setcorrectIQgain(int n, char **p) {
   REAL gain = atof(p[0]);
-  //rx[RL]->iqfix->gain = 1.0 + 0.001 * gainadjustment;
   int i;																// SV1EIA AIR
 	for (i = 0; i < DEFSPEC; i++)											// SV1EIA AIR
 	{																	// SV1EIA AIR
@@ -1652,12 +1651,6 @@ setcorrectIQgain(int n, char **p) {
 /* ---------------------------------------------------------------------------- */
 PRIVATE int
 setcorrectTXIQ(int n, char **p) {
-/*
-  REAL phaseadjustment = atof(p[0]),
-       gainadjustment = atof(p[1]);
-  tx->iqfix->phase = 0.001 * phaseadjustment;
-  tx->iqfix->gain = 1.0 + 0.001 * gainadjustment;
-*/
   REAL phase = atof(p[0]),
        gain = atof(p[1]);
   int i;																// SV1EIA AIR
@@ -1684,6 +1677,7 @@ setcorrectTXIQphase(int n, char **p) {
   //tx->iqfix->phase = 0.001 * phaseadjustment;
   REAL phase = atof(p[0]);
   int i;																// SV1EIA AIR
+  //printf("setcorrectTXIQphase %f\n", (REAL) (0.001 * phase));
 	for (i = 0; i < DEFSPEC; i++)											// SV1EIA AIR
 	{																	// SV1EIA AIR
 		tx->iqfix->phase[i] = (REAL) (0.001 * phase);		// SV1EIA AIR
@@ -1706,6 +1700,7 @@ setcorrectTXIQgain(int n, char **p) {
   //tx->iqfix->gain = 1.0 + 0.001 * gainadjustment;
   REAL gain = atof(p[0]);
   int i;																// SV1EIA AIR
+  //printf("setcorrectTXIQgain %f\n", (REAL) (1.0 + 0.001 * gain));
 	for (i = 0; i < DEFSPEC; i++)											// SV1EIA AIR
 	{																	// SV1EIA AIR
 		tx->iqfix->gain[i] = (REAL) (1.0 + 0.001 * gain);	// SV1EIA AIR
