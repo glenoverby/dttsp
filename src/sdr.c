@@ -698,7 +698,7 @@ do_tx_spectrum(CXB buf) {
 * @return void
 */
 /* ---------------------------------------------------------------------------- */
-PRIVATE BOOLEAN
+PRIVATE void
 should_do_rx_squelch(int k) {
   if (rx[k]->squelch.flag) {
     int i, n = CXBhave(rx[k]->buf.o);
@@ -707,8 +707,11 @@ should_do_rx_squelch(int k) {
     for (i = 0; i < n; i++)
       rx[k]->squelch.power += Csqrmag(CXBdata(rx[k]->buf.o, i));
 
-    return Log10P(rx[k]->squelch.power) < rx[k]->squelch.thresh;
-
+    if(Log10P(rx[k]->squelch.power) < rx[k]->squelch.thresh) {
+    	return rx[k]->squelch.set = TRUE;
+    } else {
+	return rx[k]->squelch.set = FALSE;
+    }
   } else
     return rx[k]->squelch.set = FALSE;
 }
@@ -896,6 +899,8 @@ do_rx_pre(int k) {
 
   if (rx[k]->cpd.flag)
     WSCompand(rx[k]->cpd.gen);
+
+  should_do_rx_squelch(k);
 
   CXBhave(rx[k]->dttspagc.gen->buff) = CXBhave(rx[k]->buf.o);
   DttSPAgc(rx[k]->dttspagc.gen, rx[k]->tick);
