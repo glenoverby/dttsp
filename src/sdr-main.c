@@ -477,7 +477,7 @@ run_test(void) {
 
 //========================================================================
 
-PRIVATE void
+PRIVATE int
 audio_callback(jack_nframes_t nframes, void *arg) {
   float *lp, *rp;
   int nbytes = nframes * sizeof(float);
@@ -506,7 +506,7 @@ audio_callback(jack_nframes_t nframes, void *arg) {
     rp = (float *) jack_port_get_buffer(top->snds.port.o.r, nframes);
     memset((char *) lp, 0, nbytes);
     memset((char *) rp, 0, nbytes);
-    return;
+    return 0;
   }
   
   // output: copy from ring to port
@@ -535,6 +535,7 @@ audio_callback(jack_nframes_t nframes, void *arg) {
   
   // fire dsp
   sem_post(top->sync.buf.sem);
+  return 0;
 }
 
 /* @brief private gethold
@@ -740,7 +741,7 @@ setup_system_audio(void) {
   else
     sprintf(top->snds.name, "sdr-%d", top->pid);
   
-  if (!(top->snds.client = jack_client_new(top->snds.name))) {
+  if (!(top->snds.client = jack_client_open(top->snds.name, JackUseExactName, NULL))) {	// JackNullOption
     fprintf(stderr, "%s: ", top->snds.name);
     perror("can't make client -- jack not running?");
     exit(1);
