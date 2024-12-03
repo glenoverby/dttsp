@@ -15,3 +15,19 @@ of that repository at the time of check-out was:
     Last Changed Rev: 233
     Last Changed Date: 2009-02-04 06:08:38 -0600 (Wed, 04 Feb 2009)
 
+The original authors of DttSP have moved on to other things. 
+
+The other major user of DttSP is PowerSDR, originally from Flex Radio.
+PowerSDR appears to have three forks:
+
+[https://github.com/ke9ns/PowerSDR_KE9NS_v2.8.0]
+
+[https://github.com/US1GHQ/PowerSDR-2.8.0-SDR-1000]
+
+[https://code.google.com/archive/p/powersdr-iq/downloads]
+
+I've made improvements (or at least changes) to this code in my own fork of
+this repository:
+
+[https://github.com/glenoverby/dttsp-kc0iyt]
+
